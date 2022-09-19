@@ -261,7 +261,7 @@ a h4:hover {
 
 .section {
   padding-top: 90px;
-  padding-bottom: 90px;
+  padding-bottom: 20px;
 }
 .section-sm {
   padding-top: 40px;
@@ -292,7 +292,7 @@ a h4:hover {
   width: 100%;
   top: 0;
   left: 0;
-  background: #151735;
+  /*background: #151735;*/
   opacity: 0.8;
 }
 
@@ -918,7 +918,7 @@ link:focus,
 
 .footer {
   border-color: #494a43 !important;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 /* /footer */

@@ -292,7 +292,7 @@ a h4:hover {
   width: 100%;
   top: 0;
   left: 0;
-  /*background: #151735;*/
+  background: #151735;
   opacity: 0.8;
 }
 
@@ -932,5 +932,8 @@ link:focus,
 }
 .filter-controls li:hover {
   color: #55E87D;
+}
+.text-justify{
+  text-align: justify;
 }
 /*# sourceMappingURL=style.css.map */

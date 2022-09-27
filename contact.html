@@ -129,7 +129,7 @@
     </div>
     <div class="row">
       <div class="col-lg-7 mb-4 mb-lg-0">
-        <form id="contact-form" method="post" action="#" role="form" onsubmit="return enviarEmail();">
+        <form id="contact-form" method="post" action="#contact-form" role="form" onsubmit="return enviarEmail();">
           <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name" required>
           <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email" required>
           <input type="text" class="form-control mb-3" id="mobil" name="mobil" placeholder="Your Mobile">
@@ -164,7 +164,7 @@
           "message_mobil": mobil,
           "message_html": message
           }
-          var service_id = "gmail";
+          var service_id = "service_1heq3yl";
           var template_id_customer = "template_95ijlkg";
           var template_id_jaj = "template_pawcxdm";
           emailjs.send(service_id,template_id_customer,template_params);

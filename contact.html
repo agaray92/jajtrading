@@ -43,7 +43,13 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
-
+  <!-- Envio de emails -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+  <script type="text/javascript">
+  (function(){
+      emailjs.init("vBPHzYYl5HPqqRMEC");
+  })();
+  </script>
 </head>
 
 <body>
@@ -131,10 +137,10 @@
     </div>
     <div class="row">
       <div class="col-lg-7 mb-4 mb-lg-0">
-        <form action="/contact.html" method="POST">
+        <form id="contact-form" method="post" action="#" role="form" onsubmit="return enviarEmail();">
           <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name" required>
           <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email" required>
-          <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Your Mobile">
+          <input type="text" class="form-control mb-3" id="mobil" name="mobil" placeholder="Your Mobile">
           <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message" required></textarea>
           <button type="submit" value="send" class="btn btn-primary">SEND MESSAGE</button>
         </form>
@@ -154,6 +160,27 @@
       </div>
     </div>
   </div>
+  <script>
+    function enviarEmail(){
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('mobil').value;
+      var message = document.getElementById('message').value;
+      var template_params = {
+          "from_name": name,
+          "from_email": email,
+          "message_mobil": mobil,
+          "message_html": message
+          }
+          var service_id = "gmail";
+          var template_id_customer = "template_95ijlkg";
+          var template_id_jaj = "template_pawcxdm";
+          emailjs.send(service_id,template_id_customer,template_params);
+          emailjs.send(service_id,template_id_jaj,template_params);
+          return false;
+      
+    }
+  </script>
 </section>
 <!-- /contact -->
 

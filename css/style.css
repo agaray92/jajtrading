@@ -936,4 +936,8 @@ link:focus,
 .text-justify{
   text-align: justify;
 }
+.error-formulario {
+  font-size: 0.8em;
+  color: #A93226;
+}
 /*# sourceMappingURL=style.css.map */

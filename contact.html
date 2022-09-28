@@ -171,7 +171,7 @@
           var template_id_customer = "template_95ijlkg";
           emailjs.send(service_id,template_id_customer,template_params);
           const myTimeout = setTimeout(enviarEmailJaj, 10000);
-          document.getElementById('messageError').innerHTML = 'Message sent successfully';
+          document.getElementById('messageEnvio').innerHTML = 'Message sent successfully';
           return false;
     }
     function enviarEmailJaj(service_id,template_params, myTimeout){

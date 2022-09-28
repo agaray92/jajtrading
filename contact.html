@@ -135,6 +135,9 @@
           <input type="text" class="form-control mb-3" id="mobil" name="mobil" placeholder="Your Mobile">
           <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message" required></textarea>
           <input type="submit" value="SEND MESSAGE" class="btn btn-primary"></input>
+          <div class="col-lg-12">
+            <span id="messageEnvio" class="error-formulario"></span>
+          </div>
         </form>
       </div>
       <div class="col-lg-5">
@@ -153,10 +156,10 @@
     </div>
   </div>
   <script>
-    function enviarEmail(){
+    function enviarEmailCustomer(){
       var name = document.getElementById('name').value;
       var mail = document.getElementById('mail').value;
-      var subject = document.getElementById('mobil').value;
+      var mobil = document.getElementById('mobil').value;
       var message = document.getElementById('message').value;
       var template_params = {
           "from_name": name,
@@ -166,11 +169,15 @@
           }
           var service_id = "service_1heq3yl";
           var template_id_customer = "template_95ijlkg";
-          var template_id_jaj = "template_pawcxdm";
           emailjs.send(service_id,template_id_customer,template_params);
-          emailjs.send(service_id,template_id_jaj,template_params);
+          const myTimeout = setTimeout(enviarEmailJaj, 10000);
+          document.getElementById('messageError').innerHTML = 'Message sent successfully';
           return false;
-      
+    }
+    function enviarEmailJaj(service_id,template_params, myTimeout){
+      var template_id_jaj = "template_pawcxdm";
+      emailjs.send(service_id,template_id_jaj,template_params);
+      clearTimeout(myTimeout);
     }
   </script>
 </section>

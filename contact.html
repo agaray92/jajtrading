@@ -129,7 +129,7 @@
     </div>
     <div class="row">
       <div class="col-lg-7 mb-4 mb-lg-0">
-        <form id="contact-form" method="post" action="#contact-form" role="form" onsubmit="return enviarEmailCustomer();">
+        <form id="contact-form" method="post" action="#contact-form" role="form" onsubmit="return enviarEmails();">
           <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name" required>
           <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email" required>
           <input type="text" class="form-control mb-3" id="mobil" name="mobil" placeholder="Your Mobile">
@@ -156,7 +156,7 @@
     </div>
   </div>
   <script>
-    function enviarEmailCustomer(){
+    function enviarEmails(){
       var name = document.getElementById('name').value;
       var mail = document.getElementById('mail').value;
       var mobil = document.getElementById('mobil').value;
@@ -170,14 +170,13 @@
           var service_id = "service_1heq3yl";
           var template_id_customer = "template_95ijlkg";
           emailjs.send(service_id,template_id_customer,template_params);
-          const myTimeout = setTimeout(enviarEmailJaj, 10000);
+          setTimeout(() => {
+            console.log('5 segundos despues envia el otro correo');
+            var template_id_jaj = "template_pawcxdm";
+            emailjs.send(service_id,template_id_jaj,template_params);
+          }, "5000")
           document.getElementById('messageEnvio').innerHTML = 'Message sent successfully';
           return false;
-    }
-    function enviarEmailJaj(service_id,template_params, myTimeout){
-      var template_id_jaj = "template_pawcxdm";
-      emailjs.send(service_id,template_id_jaj,template_params);
-      clearTimeout(myTimeout);
     }
   </script>
 </section>

@@ -143,8 +143,13 @@ h6, .h6 {
 .btn-primary::before {
   background-color: #fff;
 }
-.btn-primary:active, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus, .btn-primary.active {
+.btn-primary:hover {
   color: #55E87D !important;
+  background-color: #55E87D !important;
+  border-color: #55E87D !important;
+}
+.btn-primary:active, .btn-primary:focus {
+  color: #fff !important;
   background-color: #55E87D !important;
   border-color: #55E87D !important;
 }
